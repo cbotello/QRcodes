@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing QRCodes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="formulario">
+            <h2>Ingresa el texto</h2>
+            <div class="campo">
+                <label for="nombre">Nombre del codigo</label>
+                <input type="text" placeholder="EJ. JS">
+            </div>
+            <div class="campo">
+                <label for="texto">Texto simple</label>
+                <input type="text" placeholder="EJ. JavaScripr">
+            </div>
+            <div class="campo">
+                <label for="">Color del codigo</label>
+                <div class="colores">
+                    <label for="" class="color-option" style="background-color: #000 ;"></label>
+                    <input type="radio" name="color" value="#000" checked>
+
+                    <label for="" class="color-option" style="background-color: #ff0000 ;"></label>
+                    <input type="radio" name="color" value="#ff0000">
+
+                    <label for="" class="color-option" style="background-color: #006eff ;"></label>
+                    <input type="radio" name="color" value="#006eff">
+
+                    <label for="" class="color-option" style="background-color: #ff6600 ;"></label>
+                    <input type="radio" name="color" value="#ff6600">
+
+                    <label for="" class="color-option" style="background-color: #ff00d4 ;"></label>
+                    <input type="radio" name="color" value="#ff00d4">
+                </div>
+
+                <button class="btn">Generar Codigo QR</button>
+                <button class="btn">Descargar QR</button>
+                <button class="btn">Crear otro codigo</button>
+
+                <div class="preview">
+                    <div class="phone-frame">
+                        <div class="qr-container">
+                            <canvas>
+                            </canvas>
+                            <p>Escaneame</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
