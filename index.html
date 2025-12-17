@@ -9,51 +9,55 @@
 <body>
     <div class="container">
         <div class="formulario">
-            <h2>Ingresa el texto</h2>
+            <h2>Generador de códigos QR</h2>
             <div class="campo">
-                <label for="nombre">Nombre del codigo</label>
-                <input type="text" placeholder="EJ. JS">
+                <label for="nombre">Nombre del código</label>
+                <input type="text" id="nombre" placeholder="Ej. qrFactura">
             </div>
             <div class="campo">
-                <label for="texto">Texto simple</label>
-                <input type="text" placeholder="EJ. JavaScripr">
+                <label for="texto">Texto del código</label>
+                <input type="text" id="texto" placeholder="Ej. Factura en www.facturaAqui.com">
             </div>
             <div class="campo">
-                <label for="">Color del codigo</label>
+                <label>Color del codigo</label>
                 <div class="colores">
-                    <label for="" class="color-option" style="background-color: #000 ;">
-                        <input type="radio" name="color" value="#000" checked>
+                    <label class="color-option" style="background-color: #000 ;">
+                        <input type="radio" name="color" value="#000">
                     </label>
 
-                    <label for="" class="color-option" style="background-color: #ff0000 ;">
+                    <label class="color-option" style="background-color: #ff0000 ;">
                         <input type="radio" name="color" value="#ff0000">
                     </label>
 
-                    <label for="" class="color-option" style="background-color: #006eff ;">
+                    <label class="color-option" style="background-color: #006eff ;">
                         <input type="radio" name="color" value="#006eff">
                     </label>
 
-                    <label for="" class="color-option" style="background-color: #ff6600 ;">
+                    <label class="color-option" style="background-color: #ff6600 ;">
                         <input type="radio" name="color" value="#ff6600">
                     </label>
 
-                    <label for="" class="color-option" style="background-color: #ff00d4 ;">
+                    <label class="color-option" style="background-color: #ff00d4 ;">
                         <input type="radio" name="color" value="#ff00d4">
                     </label>
                 </div>
             </div>
-                <button class="btn">Generar Codigo QR</button>
-                <button class="btn">Descargar QR</button>
-                <button class="btn">Crear otro codigo</button>
+            
+                <button class="btn" id="btn-generar" onclick="generarQR()" disabled>Generar Codigo QR</button>
+                <button class="btn" id="btn-descargar" onclick="descargarQR()" disabled>Descargar QR</button>
+                <button class="btn" onclick="reiniciarFormulario()">Crear otro codigo</button>
         </div>
         <div class="preview">
             <div class="phone-frame">
                 <div class="qr-container">
-                    <canvas></canvas>
+                    <canvas id="qrCode"></canvas>
                     <p>Escaneame</p>
                 </div>
             </div>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>

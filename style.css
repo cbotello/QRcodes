@@ -90,6 +90,12 @@ body {
     margin-top: 1rem;
 }
 
+.btn:disabled{
+    background-color: #ccc;
+    cursor: not-allowed;
+    color: #666;
+}
+
 .preview{
     flex: 1;
     display: flex;
