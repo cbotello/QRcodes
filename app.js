@@ -5,8 +5,8 @@ const btnDescargar = document.getElementById('btn-descargar');
 const canvas = document.getElementById('qrCode');
 const nConsumo = document.getElementById('nConsumo');
 
-const clienteNombres = ['Juan', 'María', 'Pedro', 'Ana', 'Luis', 'Sofía', 'Carlos', 'Lucía', 'Jorge', 'Elena'];
-const clienteApellidos = ['Pérez', 'Gómez', 'Rodríguez', 'López', 'Martínez', 'Hernández', 'García', 'Sánchez', 'Ramírez', 'Cruz'];
+const clienteNombres = ['Juan', 'María', 'Pedro', 'Ana', 'Luis', 'Sofía', 'Carlos', 'Lucía', 'Jorge', 'Elena', 'Misael', 'Valentina', 'Diego', 'Camila', 'Andrés', 'Isabella', 'Fernando', 'Gabriela', 'Ricardo', 'Natalia'];
+const clienteApellidos = ['Pérez', 'Gómez', 'Rodríguez', 'López', 'Martínez', 'Hernández', 'García', 'Sánchez', 'Ramírez', 'Cruz', 'Flores', 'Torres', 'Rivera', 'Vargas', 'Castillo', 'Rojas', 'Mendoza', 'Silva', 'Morales', 'Jiménez'];
 
 function generarVenta(){
     let numero = Math.floor(Math.random() * 100000001);
