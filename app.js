@@ -65,7 +65,7 @@ function descargarQR(){
 function reiniciarFormulario(){
     nombreInput.value = '';
     textoInput.value = '';
-    document.querySelector('input[name="color"][value = "#000"]').checked = true;
+    //document.querySelector('input[name="color"][value = "#000"]').checked = true;
 
     const contexto = canvas.getContext('2d');
     contexto.clearRect(0, 0, canvas.width, canvas.height);
