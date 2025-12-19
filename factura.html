@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genera tu factura</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="formulario">
+            <h2>Generador de códigos QR</h2>
+            <div class="campo">
+                <label for="nombre">Nombre del código</label>
+                <input type="text" id="nombre" placeholder="Ej. qrFactura">
+            </div>
+            <div class="campo">
+                <label for="texto">Texto del código</label>
+                <input type="text" id="texto" placeholder="Ej. Factura en www.facturaAqui.com">
+            </div>
+        </div>
+        <div class="preview">
+            <div class="phone-frame">
+                <div class="qr-container">
+                    <canvas id="qrCode"></canvas>
+                    <p>Escanéame</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/factura.js"></script>
+</body>
+</html>
