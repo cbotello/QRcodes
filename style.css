@@ -22,6 +22,14 @@ body {
     width: 100%
 }
 
+.colorPicker{
+    width: 100%; 
+    height: 50px; 
+    border: none; 
+    cursor: pointer;
+    background-color: transparent;
+}
+
 .formulario, .venta{
     flex: 1;
     padding-right: 2rem;

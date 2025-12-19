@@ -4,18 +4,22 @@ const btnGenerar = document.getElementById('btn-generar');
 const btnDescargar = document.getElementById('btn-descargar');
 const canvas = document.getElementById('qrCode');
 const nConsumo = document.getElementById('nConsumo');
+
 const clienteNombres = ['Juan', 'María', 'Pedro', 'Ana', 'Luis', 'Sofía', 'Carlos', 'Lucía', 'Jorge', 'Elena'];
 const clienteApellidos = ['Pérez', 'Gómez', 'Rodríguez', 'López', 'Martínez', 'Hernández', 'García', 'Sánchez', 'Ramírez', 'Cruz'];
 
-function generarConsumo(){
+function generarVenta(){
     let numero = Math.floor(Math.random() * 100000001);
     let costo= Math.random() * (1000-10) + 10; 
     costo = costo.toFixed(2);
     const cliente = clienteNombres[Math.floor(Math.random() * clienteNombres.length)] + ' ' + clienteApellidos[Math.floor(Math.random() * clienteApellidos.length)];
 
     document.getElementById('cliente').value = cliente;
-    document.getElementById('total').value = `$${costo}`;
+    document.getElementById('total').value = `$ ${costo}`;
     nConsumo.value = numero;
+
+    textoInput.value = `venta No: ${numero}\nCliente: ${cliente}\nTotal: $ ${costo}`;
+    nombreInput.value = `Venta_${numero}_${cliente.replace(' ', '_')}`;
 }
 
 function validarCampos(){
@@ -30,7 +34,8 @@ textoInput.addEventListener('input', validarCampos);
 
 function generarQR(){
     const texto = textoInput.value.trim();
-    const color = document.querySelector('input[name="color"]:checked').value;
+    const color = document.querySelector('input[name="colorPicker"]').value;
+    //const color = document.querySelector('input[name="color"]:checked').value;
     if(!texto) return;
 
     QRCode.toCanvas(canvas, texto, {
