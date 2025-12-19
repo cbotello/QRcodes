@@ -3,6 +3,20 @@ const textoInput = document.getElementById('texto');
 const btnGenerar = document.getElementById('btn-generar');
 const btnDescargar = document.getElementById('btn-descargar');
 const canvas = document.getElementById('qrCode');
+const nConsumo = document.getElementById('nConsumo');
+const clienteNombres = ['Juan', 'María', 'Pedro', 'Ana', 'Luis', 'Sofía', 'Carlos', 'Lucía', 'Jorge', 'Elena'];
+const clienteApellidos = ['Pérez', 'Gómez', 'Rodríguez', 'López', 'Martínez', 'Hernández', 'García', 'Sánchez', 'Ramírez', 'Cruz'];
+
+function generarConsumo(){
+    let numero = Math.floor(Math.random() * 100000001);
+    let costo= Math.random() * (1000-10) + 10; 
+    costo = costo.toFixed(2);
+    const cliente = clienteNombres[Math.floor(Math.random() * clienteNombres.length)] + ' ' + clienteApellidos[Math.floor(Math.random() * clienteApellidos.length)];
+
+    document.getElementById('cliente').value = cliente;
+    document.getElementById('total').value = `$${costo}`;
+    nConsumo.value = numero;
+}
 
 function validarCampos(){
     const nombreValido =  nombreInput.value.trim() !== '';

@@ -8,6 +8,22 @@
 </head>
 <body>
     <div class="container">
+        <div class="venta">
+            <h2>Información de la venta</h2>
+            <div class="campoVenta">
+                <label for="nConsumo">Número de consumo</label>
+                <input type="text" id="nConsumo" disabled>
+            </div>
+            <div class="campoVenta">
+                <label for="cliente">Cliente</label>
+                <input type="text" id="cliente" disabled>
+            </div>
+            <div class="campoVenta">
+                <label for="total">Total</label>
+                <input type="text" id="total" disabled>
+            </div>
+            <button class="btn" id="btn-generar" onclick="generarConsumo()">Generar venta aleatoria</button>
+        </div>
         <div class="formulario">
             <h2>Generador de códigos QR</h2>
             <div class="campo">
