@@ -6,9 +6,6 @@ body {
     margin: 0;
     font-family:'Segoe UI', sans-serif;
     background-color: #f7f7f7;
-    display: flex;
-    justify-content: center;
-    padding: 2rem;
 }
 
 .container{
@@ -19,7 +16,13 @@ body {
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     max-width: 1000px;
-    width: 100%
+    width: 100%;
+    margin: 0 auto;
+}
+
+.nav-icon{
+    width: 50px;
+    border-radius: 25px;
 }
 
 .colorPicker{
@@ -188,3 +191,86 @@ body {
         padding-left: 0;
     }
 }
+
+/* Inicio de estilos agregados */
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+    padding: 0 20px;
+}
+
+.nav-icon {
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+.nav-list li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-list select {
+    background-color: #145491;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.banner {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 48px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .nav-list {
+        margin-top: 10px;
+        gap: 10px;
+    }
+
+    .banner h1 {
+        font-size: 32px;
+    }
+}
+/* Fin de estilos agregados */
