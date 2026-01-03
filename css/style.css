@@ -8,9 +8,22 @@ body {
     background-color: #f7f7f7;
 }
 
-.container{
+ul{
+    list-style: none;
+    padding: 1rem;
+    margin: 0;
+}
+
+.tiposCodigos a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #265d90;
+}
+
+.container, .IndexContainer{
     display: flex;
-    flex-direction: row;
+    
     background: white;
     padding: 2rem;
     border-radius: 12px;
@@ -18,6 +31,22 @@ body {
     max-width: 1000px;
     width: 100%;
     margin: 0 auto;
+}
+
+.container{
+    flex-direction: row;
+}
+
+.IndexContainer{
+    flex-direction: column;
+}
+
+.QRimages{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 1rem;
 }
 
 .nav-icon{
