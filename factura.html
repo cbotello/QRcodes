@@ -10,7 +10,7 @@
     <div class="container">
         <a href="index.html">Regresar</a>
         <div class="venta">
-            <h2>Información de la venta</h2>
+            <h2>Confirma la información de la venta</h2>
             <div class="campoVenta">
                 <label for="inputNumero">Número de consumo</label>
                 <input type="text" id="inputNumero" disabled>
@@ -23,18 +23,18 @@
                 <label for="inputTotal">Total</label>
                 <input type="text" id="inputTotal" disabled>
             </div>
-            <button class="btn" id="btn-confirmarVenta" onclick="confirmarVenta()" disabled>Confirmar Venta</button>
+            <button class="btn" id="btn-confirmarVenta" onclick="habilitarCampos()">Confirmar Venta</button>
         </div>
         <div class="preview">
                     <div class="venta">
             <h2>Datos fiscales</h2>
             <div class="campoVenta">
-                <label for="nConsumo">RFC</label>
-                <input type="text" id="nConsumo" disabled>
+                <label for="rfc">RFC</label>
+                <input type="text" id="rfc" disabled>
             </div>
             <div class="campoVenta">
-                <label for="cliente">Razón social</label>
-                <input type="text" id="cliente" disabled>
+                <label for="razonSocial">Razón social</label>
+                <input type="text" id="razonSocial" disabled>
             </div>
             <div class="campoVenta">
                 <label for="regimenFiscal">Régimen Fiscal</label>
